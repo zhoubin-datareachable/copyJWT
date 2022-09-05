@@ -1,0 +1,24 @@
+{
+  "name": "我的第一个扩展程序",
+  "version": "1.0",
+  "manifest_version": 3,
+  "description": "第一个由我开发的扩展",
+  "icons": {
+    "16": "icon16.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  },
+  "action": {
+    "default_icon": "icon16.png",
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://*.dev.datareachable.net/*"],
+      "js": ["content_scripts.js"],
+      "run_at": "document_end",
+      "all_frames": false
+    }
+  ],
+  "permissions": ["tabs", "storage"]
+}
