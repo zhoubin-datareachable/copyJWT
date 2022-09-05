@@ -1,16 +1,15 @@
 {
-  "name": "我的第一个扩展程序",
+  "name": "复制JWT",
   "version": "1.0",
   "manifest_version": 3,
-  "description": "第一个由我开发的扩展",
+  "description": "复制JWT",
   "icons": {
     "16": "icon16.png",
     "48": "icon48.png",
     "128": "icon128.png"
   },
   "action": {
-    "default_icon": "icon16.png",
-    "default_popup": "popup.html"
+    "default_icon": "icon16.png"
   },
   "content_scripts": [
     {
