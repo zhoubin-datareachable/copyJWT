@@ -1,22 +1,22 @@
-const div = document.createElement("div");
+const div = document.createElement('div');
 
 /**
  * 复制文本
  * @param {*} str
  */
 const copyToClipboard = (str) => {
-  const el = document.createElement("textarea");
+  const el = document.createElement('textarea');
   el.value = str;
-  el.setAttribute("readonly", "");
-  el.style.position = "absolute";
-  el.style.left = "-9999px";
+  el.setAttribute('readonly', '');
+  el.style.position = 'absolute';
+  el.style.left = '-9999px';
   document.body.appendChild(el);
   const selected =
     document.getSelection().rangeCount > 0
       ? document.getSelection().getRangeAt(0)
       : false;
   el.select();
-  document.execCommand("copy");
+  document.execCommand('copy');
   document.body.removeChild(el);
   if (selected) {
     document.getSelection().removeAllRanges();
@@ -28,7 +28,7 @@ const copyToClipboard = (str) => {
  * 复制jwt
  */
 const copyJWT = () => {
-  const jwt = localStorage.getItem("jwt_v2_dev");
+  const jwt = localStorage.getItem('v2_dev_jwt');
   copyToClipboard(jwt);
 };
 
@@ -93,6 +93,6 @@ div.innerHTML = `
     </div>
 `;
 
-div.addEventListener("click", copyJWT);
+div.addEventListener('click', copyJWT);
 
 document.body.append(div);
